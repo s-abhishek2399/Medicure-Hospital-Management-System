@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediCure</title>
+
+
+    <script>
+        function favTutorial() {
+            var mylist = document.getElementById("myList");
+            document.getElementById("favourite").value = mylist.options[mylist.selectedIndex].text;
+        }
+    </script>
+
     <style>
         /*welcome start css*/
         
@@ -165,6 +174,7 @@
         .login-form .group input[data-type="password"] {
             text-security: circle;
             -webkit-text-security: circle;
+            margin-bottom: 20px;
         }
         
         .login-form .group .label {
@@ -241,6 +251,18 @@
         .foot-lnk {
             text-align: center;
         }
+        
+        #log {
+            color: white;
+            padding: 10px;
+        }
+        
+        #log1 {
+            color: white;
+            margin-top: 20px;
+            padding-bottom: 30px;
+            padding: 10px;
+        }
         /* login end css */
     </style>
 
@@ -304,19 +326,32 @@
                         <label for="pass" class="label">Password</label>
                         <input id="pass" type="password" class="input" data-type="password">
                     </div>
+                    <!-- loginas started -->
+                    <b id="log"> Login As</b>
+                    <select id="myList" onchange="favTutorial()">
+                            <option> Choose Login </option>
+                            <option> Doctor </option>
+                            <option> Patient</option>
+                            <option> Admin</option>
+                           
+                      </select>
+                    <p id="log1"> You want to login as
+                        <input type="text" id="favourite" size="20" </p>
 
-                    <div class="group">
-                        <input id="check" type="checkbox" class="check" checked>
-                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
-                    </div>
-                    <div class="group">
-                        <input type="submit" class="button" value="Sign In">
-                    </div>
+                        <!-- login as ended -->
 
-                    <div class="hr"></div>
-                    <div class="foot-lnk">
-                        <a href="#forgot">Forgot Password?</a>
-                    </div>
+                        <div class="group">
+                            <input id="check" type="checkbox" class="check" checked>
+                            <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign In">
+                        </div>
+
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <a href="#forgot">Forgot Password?</a>
+                        </div>
                 </div>
                 <div class="sign-up-htm">
                     <div class="group">
@@ -337,6 +372,18 @@
                         <label for="pass" class="label">Email Address</label>
                         <input id="pass" type="text" class="input">
                     </div>
+
+                    <!-- loginas started -->
+                    <b id="log"> Signup As</b>
+                    <select id="myList" onchange="favTutorial()">
+                            <option> Choose Login </option>
+                            <option> Doctor </option>
+                            <option> Patient</option>
+                            <option> Admin</option>
+                           
+                      </select>
+
+                    <!-- login as ended -->
 
                     <div class="group">
                         <input type="submit" class="button" value="Sign Up">
