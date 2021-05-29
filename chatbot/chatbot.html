@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <!-- ChatBot -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.convform.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.convform.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+</head>
+<style>
+    body {
+        background-color: rgb(12, 22, 48);
+    }
+    /*ChatBot*/
+    
+    .chat_icon {
+        position: fixed;
+        bottom: 0;
+        right: 30px;
+        z-index: 1000;
+        padding: 0;
+        font-size: 80px;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .chat_box {
+        width: 400px;
+        height: 80vh;
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        background: #dedede;
+        z-index: 1000;
+        transition: all 0.3s ease-out;
+        transform: scaleY(0);
+    }
+    
+    .chat_box.active {
+        transform: scaleY(1);
+    }
+    
+    #messages {
+        padding: 20px;
+    }
+    
+    .my-conv-form-wrapper textarea {
+        height: 30px;
+        overflow: hidden;
+        resize: none;
+    }
+    
+    .hidden {
+        display: none !important;
+    }
+</style>
+
+<body>
+    <!-- ChatBot -->
+    <div class="chat_icon">
+        <i class="fa fa-comments" aria-hidden="true"></i>
+    </div>
+
+    <div class="chat_box">
+        <div class="my-conv-form-wrapper">
+            <form action="" method="GET" class="hidden">
+
+                <select data-conv-question="Hello! welcome to Medicure ! Hospital Management System . How can I help you" name="category">
+        <option value="Doctor details">Doctor Details ?</option>
+        <option value="Take appointement">Take Appointment?</option>
+      </select>
+
+                <div data-conv-fork="category">
+                    <div data-conv-case="Doctor details">
+                        <input type="text" name="doctor details" data-conv-question="Please, choose according to your problem : 1. Allergist
+                        2. Anaesthesiologist
+                        3. Andrologist
+                        4. Cardiologist
+                        5. Cardiac Electrophysiologist
+                        6. Dermatologist
+                        7. Dietitian/Dietician
+                        8. Emergency Room (ER) Doctors
+                        9. Endocrinologist
+                        10. Epidemiologist
+                        11. Family Medicine Physician
+                        12. Gastroenterologist
+                        13. Geriatrician
+                        14. Hyperbaric Physician
+                        15. Hematologist
+                        16. Hepatologist
+                        17. Immunologist
+                        18. Infectious Disease Specialist
+                        19. Intensivist
+                        20. Internal Medicine Specialist
+                        21. Maxillofacial Surgeon / Oral Surgeon
+                        22. Medical Examiner
+                        23. Medical Geneticist
+                        24. Neonatologist
+                        25. Nephrologist
+                        26. Neurologist">
+                    </div>
+                    <div data-conv-case="Take appointement" data-conv-fork="first-question2">
+                        <input type="text" name="companyName" data-conv-question="Please, Choose Doctor available :  
+                       1. Dr. Ashim Desai
+                       2. Dr. Dwarkanath Kotnis The name is still taken whenever we look back the glorious past of China. Dr. ...
+                        3. Dr. Ramneek Mahajan There is another name in the field of joint replacement is Dr. Ramneek Mahajan. ...
+                        4. Dr. Sanjay Borude The recent research shows that the maximum person of daily, fast food eater often faces the problem of Obesity and Metabolic rate. ...
+                        5. Dr. Amod Roy The India’s most popular cosmetic surgeon with great years of experience in some acute plastic surgery has made Dr. ...
+                        6. Dr. Lalit Panchal There are diseases which are associated with spinal cord">
+                    </div>
+                </div>
+
+                <input type="text" name="name" data-conv-question="Please, Enter your Name">
+                <input type="text" name="phone" data-conv-question="Please, Enter your Contact Number">
+                <input type="text" name="address" data-conv-question="Please, Enter your Address">
+                <input type="text" name="doctor name" data-conv-question="Please, Enter Doctor name , with whome you want to consult?">
+
+
+                <input type="text" data-conv-question="Hi {name}, <br> It's a pleasure to meet you." data-no-answer="true">
+
+                <input data-conv-question="Enter your e-mail" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="email" name="email" required placeholder="What's your e-mail?">
+
+                <select data-conv-question="Please Confirm">
+        <option value="Yes">Confirm</option>
+      </select>
+
+            </form>
+        </div>
+    </div>
+    <!-- ChatBot end -->
+
+
+</body>
+
+</html>
