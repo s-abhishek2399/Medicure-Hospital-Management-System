@@ -1,0 +1,114 @@
+* {
+    transition: all 1s ease;
+}
+
+html {
+    background-color: #44566b;
+    color: #6c757d;
+}
+
+
+/* input form and result css started  */
+
+.textCenter {
+    text-align: center;
+}
+
+.userInput {
+    margin: 0 5% !important;
+}
+
+input {
+    background-color: #030316 !important;
+    color: #e1e6eb !important;
+}
+
+input::placeholder {
+    color: #d0dae4 !important;
+}
+
+.heading {
+    margin: 30px 0;
+    text-transform: none;
+    color: rgb(219, 211, 197);
+}
+
+.definition,
+pre {
+    background-color: #ececf7;
+    color: #071725;
+}
+
+.error {
+    color: red;
+}
+
+.response {
+    margin: 0 10px;
+    background-color: #8ea8c3;
+}
+
+hr {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #41414e;
+}
+
+.creator {
+    color: #161625;
+    margin-bottom: 30px;
+}
+
+#text1 {
+    font-size: 20px;
+    color: rgb(17, 46, 73);
+    padding: 10px;
+}
+
+#search1 {
+    font-size: 10px;
+}
+
+#search2 {
+    font-size: 20px;
+}
+
+.result {
+    height: 700px;
+    width: 50%;
+}
+
+
+/* input form and result css ended  */
+
+
+/* text started */
+
+#becc {
+    margin-left: 38%;
+    font-weight: nowrap;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 60px;
+}
+
+#cecc {
+    font-weight: nowrap;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+#ecc {
+    font-weight: nowrap;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+
+/* text ended */
