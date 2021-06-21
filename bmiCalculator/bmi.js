@@ -1,3 +1,5 @@
+// input output js start
+
 const searchForm = document.querySelector("form");
 let weightANDheight = "";
 
@@ -27,7 +29,7 @@ const showResult = (data, isError = false) => {
     if (!isError) {
         const status = data.status;
         const result = data.result;
-        const id_weight = data.ideal_weight;
+
 
 
         resultDiv.innerHTML = `    <div class="box response textCenter">
@@ -43,9 +45,9 @@ const showResult = (data, isError = false) => {
 
         </div>
         <div id="text1" class="id_weight">
-            <h1> <strong> Ideal Weight by BMI is : </strong> </h1>
+            <h1> <strong> Ideal BMI is :</strong>  <br> <br>  In the 18.5 to 24.9 range.</h1>
 
-            ${id_weight}
+            
 
         </div>
         <br>
@@ -65,3 +67,5 @@ const showResult = (data, isError = false) => {
   </div>`;
     }
 };
+
+// input output js ended
